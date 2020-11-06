@@ -1,22 +1,25 @@
 let number=Math.floor(Math.random()*10);
 console.log('The number is : '+number);
-if(number==1){
-    console.log('One');
-}else if (number==2){
-    console.log('Two');
-}else if(number==3){
-    console.log('Three');
-}else if(number==4){
-    console.log('Four');
-}else if(number==5){
-    console.log('Five');
-}else if(number==6){
-    console.log('Six');
-}else if(number==7){
-    console.log('Seven');
-}else if(number==8){
-    console.log('Eight');
-}else if(number==9){
-    console.log('Nine');
-}else
-console.log('Zero');
+switch (number){
+    case 0 : console.log('Zero');
+    break;
+    case 1 :  console.log('One');
+    break;
+    case 2 : console.log('Two');
+    break;
+    case 3 : console.log('Three');
+    break;
+    case 4 :  console.log('Four');
+    break;
+    case 5 : console.log('Five');
+    break;
+    case 6 : console.log('Six');
+    break;
+    case 7 :  console.log('Seven');
+    break;
+    case 8 : console.log('Eight');
+    break;
+    case 9 : console.log('Nine');
+    break;
+    default : console.log('Invalid No : ');
+}
