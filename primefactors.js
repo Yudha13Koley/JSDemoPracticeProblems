@@ -1,15 +1,19 @@
-const myArgs=process.argv.slice(2);
-let input=parseInt(myArgs[0]);
-if(input<1){
-    console.log('Enter Valid Number !');
-    return;
-}
-console.log('Factors of '+input+' are :');
-for(i=1;i<=Math.sqrt(input);i++){
-    if(input%i==0){
-        console.log(i);
-        if(i!=input/i){
-        console.log(input/i);
-        }
+const prompt = require('prompt-sync')();
+let num=prompt('Enter a Number To Get Its Prime Factors : ');
+console.log('The number is : '+num);
+function primeFactors(n){
+    var factors = [], 
+        divisor = 2;
+    while(n>=2){
+      if(n % divisor == 0){
+         factors.push(divisor); 
+         n= n/ divisor;
+      }
+      else{
+        divisor++;
+      }     
     }
-}
+    return factors;
+  }
+  let primeFactorsArr=primeFactors(num);
+  console.log(primeFactorsArr);
